@@ -1,0 +1,10 @@
+
+Funções:
+
+  unsigned int extractFirstPair(unsigned int value)
+
+    -Retornara os dois primeiros dígitos de um número de 4 dígitos
+
+  unsigned int extractLastPair(unsigned int value)
+
+    -Retornara os dois últimos dígitos de um número de 4 dígitos

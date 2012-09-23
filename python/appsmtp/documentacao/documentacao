@@ -1,0 +1,7 @@
+
+-Trabalho desenvolvido na linguagem: Python
+-Foi utilizada a biblioteca stmplib para o uso do protocolo 'smtp'
+-A aplicação recebe como parâmetro um conjunto de parâmetros que serão interpretados como a mensagem a ser enviada.
+ O remetente e o destinatário são fixos e estão definidos dentro do código.
+-A aplicação realiza autenticação no servidor com os dados do usuário e envia a mensagem para o destinatário
+

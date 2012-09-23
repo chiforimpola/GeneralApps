@@ -1,0 +1,6 @@
+
+ALLEGRO_TEXTLOG *al_open_native_text_log(char const *title, int flags);
+
+al_append_native_text_log(ALLEGRO_TEXTLOG *textlog, char const *format,...);
+
+al_close_native_text_log(ALLEGRO_TEXTLOG *textlog);

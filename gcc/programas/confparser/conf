@@ -1,0 +1,18 @@
+[conf]
+health = 100
+defense = 280
+screen_width = 100
+screen_height = 200
+char_path = characters
+name = abc
+class = qualquer_class
+
+[conf2]
+path = abc
+
+[conf3]
+class=class_de_conf2
+
+[screen]
+width = 100
+height = 230

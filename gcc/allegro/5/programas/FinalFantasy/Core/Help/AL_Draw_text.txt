@@ -1,0 +1,6 @@
+
+al_load_font(char const *filename, int size, int flags)
+
+al_draw_text(const ALLEGRO_FONT *font,
+   ALLEGRO_COLOR color, float x, float y, int flags,
+   char const *text)

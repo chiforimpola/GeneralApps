@@ -1,0 +1,38 @@
+
+#include <allegro5/allegro_native_dialog.h>
+
+al_show_native_message_box(
+  ALLEGRO_DISPLAY *display, 
+  char const *title, char   const  *heading, char  const  *text, 
+  char const *buttons, int  flags);
+
+ALLEGRO_MESSAGEBOX_WARN
+ALLEGRO_MESSAGEBOX_ERROR
+ALLEGRO_MESSAGEBOX_QUESTION
+ALLEGRO_MESSAGEBOX_OK_CANCEL
+ALLEGRO_MESSAGEBOX_YES_NO
+
+Returns: 
+
+    •  0 if the dialog window was closed without activating a button. 
+
+    •  1 if the OK or Yes button was pressed. 
+
+    •  2 if the Cancel or No button was pressed. 
+
+If buttons is not NULL, the number of the pressed button is returned, starting with 1. 
+
+If a message box could not be created then this returns 0, as if the window was dismissed without 
+activating a button. 
+
+Example: 
+
+     button = al_show_native_message_box(
+         display, 
+         "Warning", 
+         "Are you sure?",
+         "msg..."
+        "message box.",
+        NULL, 
+        ALLEGRO_MESSAGEBOX_YES_NO 
+    ); 

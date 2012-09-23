@@ -1,0 +1,3 @@
+-a ideia seria realizar uma aplicacao que realize um parse no html de um link,
+-realizasse o download do html de cada link localizado,
+-salvasse o arquivo baixado no disco

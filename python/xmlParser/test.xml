@@ -1,0 +1,14 @@
+<character>
+    <estate>
+      <id>0</id>
+      <sprpath>stance</sprpath>
+      <delay>0.5</delay>
+    </estate>
+
+    <estate>
+      <id>1</id>
+      <sprpath>walking</sprpath>
+      <delay>0.5</delay>
+    </estate>
+
+</character>

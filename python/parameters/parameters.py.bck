@@ -1,0 +1,69 @@
+
+
+def explode (search_array, start_index = 1, commands_require_value = False):
+    do_commands = []
+    parameters = []
+    map_index_command = 'command'
+    map_index_parameter = 'parameter'
+    result = {}
+    command_require_value_found = 0
+    command_require_value_index = -1
+
+    for i in range(start_index, len (search_array)):
+        if search_array[i][0] == '-' and command_require_value_found == 0:
+            command_found = 1
+            slashindex = 1
+            while search_array[i][slashindex] == '-': slashindex += 1
+            #do_commands.append (search_array[i][slashindex:])       
+            if commands_require_value != False:
+                for i2 in range (0, len (commands_require_value)):
+                    if commands_require_value[i2] == search_array[i][slashindex:]:
+                        command_require_value_found = 1
+                        command_require_value_index = search_array[i][slashindex:]
+                if command_require_value_found == 0:
+                    do_commands.append (search_array[i][slashindex:])
+        else:
+            if command_require_value_found:
+                if search_array[i][0] == '-':
+                    error = {}
+                    error['error'] = 1
+                    error['error_value'] = command_require_value_index
+                    error['error_value'] += ';'
+                    if search_array[i][0] == '\\':
+                        error['error_value'] += search_array[i][1:]
+                    else:
+                        error['error_value'] += search_array[i]
+                    return (error)
+                result[command_require_value_index] = search_array[i]
+                command_require_value_found = 0
+            else:
+                parameters.append (search_array[i])
+
+    result[map_index_command] = do_commands
+    result[map_index_parameter] = parameters
+    result['error'] = 0
+
+    return (result)
+
+def param_exists (search_array, param_to_search, start_index = 1):
+    result = []
+    for i in range (start_index, len(search_array)):
+        if search_array[i][0] == '-':
+            if search_array[i][1:] == param_to_search: return (1)
+    return (0)
+
+def get(param, arr):
+    try:
+      for i in range (0, len (arr)):
+          i2 = 0
+          while arr[i][i2] == '-': i2 += 1
+          if arr[i] == param or arr[i][i2:] == param:
+              return (arr[i+1])
+      return (False)
+    except:
+       return (False)
+
+
+from sys import argv
+a=explode (argv, 1, ('maxdepth'))
+print a

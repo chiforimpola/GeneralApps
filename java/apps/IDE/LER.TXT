@@ -1,0 +1,2 @@
+jar cvf  TESTE.jar class1.class class2.class 
+jar cvfm TESTE.jar

@@ -1,0 +1,4 @@
+[fileA]
+abspath = a.srt
+operation = forward
+time = 00:00:10:000

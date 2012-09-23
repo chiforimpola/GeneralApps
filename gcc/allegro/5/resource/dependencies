@@ -1,0 +1,3 @@
+build-essential subversion cmake xorg-dev libgl1-mesa-dev libglu-dev
+libpng-dev libcurl4-dev libfreetype6-dev libjpeg-dev libvorbis-dev libopenal-dev libphysfs-dev  libgtk2.0-dev libasound-dev libpulse-dev libflac-dev libdumb1-dev
+
